@@ -1,0 +1,46 @@
+{
+  "name": "Orfeo",
+  "scopeName": "source.orfeo",
+  "patterns": [{ "include": "#expression" }],
+  "repository": {
+    "expression": {
+      "patterns": [
+        { "include": "#parenthesis-open" },
+        { "include": "#parenthesis-close" },
+        { "include": "#duration" },
+        { "include": "#datum-quoted" },
+        { "include": "#datum-unquoted" },
+        { "include": "#rhythm-flags" },
+        { "include": "#rhythm-dots" }
+      ]
+    },
+    "parenthesis-open": {
+      "match": "(?<=^|\\(|\\s|\\^)\\((?=[^\\.])",
+      "name": "meta.parenthesis.open.orfeo"
+    },
+    "parenthesis-close": {
+      "match": "(?<=^|[^^])\\)(?=\\.|\\)|\\s)",
+      "name": "meta.parenthesis.close.orfeo"
+    },
+    "duration": {
+      "match": "(?<=^|\\(|\\s):(=|(\\.[0-9]+|(0|[1-9][0-9]*)(\\.[0-9]*)?)(/(0?\\.[0-9]*[1-9][0-9]*|[1-9][0-9]*(\\.[0-9]*)?))?)(?=\\)|\\s)",
+      "name": "constant.other.duration.orfeo"
+    },
+    "datum-quoted": {
+      "match": "(?<=^|\\(|\\s|\\^)\"[^\"]*\"(?=\\.|\\)|\\s)",
+      "name": "string.quoted.double.datum.orfeo"
+    },
+    "datum-unquoted": {
+      "match": "(?<=^|\\(|\\s|\\^)(\\.*[_a-zA-Z0-9/\\[\\]♮♭♯-]+)+(?=\\.|\\)|\\s)",
+      "name": "string.unquoted.datum.orfeo"
+    },
+    "rhythm-flags": {
+      "match": "(?<=^|\\(|\\s)\\^+(?=\\(|\"[^\"]*\"|(\\.*[_a-zA-Z0-9/\\[\\]♮♭♯-]+)+)",
+      "name": "keyword.other.rhythm.flags.orfeo"
+    },
+    "rhythm-dots": {
+      "match": "(?<=\\)|\"|[_a-zA-Z0-9/\\[\\]♮♭♯-])\\.+(?=\\)|\\s)",
+      "name": "keyword.other.rhythm.dots.orfeo"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "language-orfeo-timeline",
+  "version": "0.1.0",
+  "publisher": "orfeo",
+  "implemented-specs": {
+    "Orfeo": "0.1.0",
+    "Timeline": "0.1.0"
+  },
+  "displayName": "Orfeo and Timeline Syntax Highlighters",
+  "description": "Orfeo and Timeline syntax highlighters for VSCode.",
+  "keywords": [
+    "Orfeo",
+    "Timeline",
+    "programming",
+    "language",
+    "syntax",
+    "highlighter",
+    "VSCode"
+  ],
+  "engines": {
+    "vscode": "^1.49.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "orfeo",
+        "aliases": ["Orfeo", "orfeo"],
+        "extensions": [".orfeo"]
+      },
+      {
+        "id": "timeline",
+        "aliases": ["Timeline", "timeline"],
+        "extensions": [".timeline"]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "orfeo",
+        "scopeName": "source.orfeo",
+        "path": "./syntaxes/orfeo.tmLanguage.json"
+      },
+      {
+        "language": "timeline",
+        "scopeName": "source.timeline",
+        "path": "./syntaxes/timeline.tmLanguage.json"
+      }
+    ],
+    "author": "Pierre-Emmanuel Lévesque <pierre.e.levesque@gmail.com>",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/orfeolang/vscode-syntax-highlighters.git"
+    },
+    "bugs": {
+      "url": "https://github.com/orfeolang/vscode-syntax-highlighters/issues"
+    },
+    "homepage": "https://github.com/orfeolang/vscode-syntax-highlighters#readme"
+  }
+}
