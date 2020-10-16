@@ -382,7 +382,7 @@ datum^^^
 #_1
 
 #_Since_variable_length_lookbehinds_are_not_supported_in_Textmate_Grammars,
-#_we_cannot_specify_to_Rhythm_Dots_when_a_preceding_token_is_not_a_valid
+#_we_cannot_specify_to_Rhythm_Dots_when_a_preceding_token_is_not_valid
 
 :4/4...   #_A_preceding_number_is_confused_with_Datum_so_Rhythm_Dots_get_colored
 datum"... #_A_badly_formed_Quoted_Datum_is_confused_with_a_correctly_formed_one
