@@ -15,31 +15,31 @@
       ]
     },
     "parenthesis-open": {
-      "match": "(?<=^|\\(|\\s|\\^)\\((?=[^\\.])",
+      "match": "(?<=^|[(\\s^])\\((?=[^.])",
       "name": "meta.parenthesis.open.orfeo"
     },
     "parenthesis-close": {
-      "match": "(?<=^|[^^])\\)(?=\\.|\\)|\\s)",
+      "match": "(?<=^|[^^])\\)(?=[)\\s.])",
       "name": "meta.parenthesis.close.orfeo"
     },
     "duration": {
-      "match": "(?<=^|\\(|\\s):(=|(\\.[0-9]+|(0|[1-9][0-9]*)(\\.[0-9]*)?)(/(0?\\.[0-9]*[1-9][0-9]*|[1-9][0-9]*(\\.[0-9]*)?))?)(?=\\)|\\s)",
+      "match": "(?<=^|[(\\s]):(=|(\\.\\d+|(0|[1-9]\\d*)(\\.\\d*)?)(/(0?\\.0*[1-9]\\d*|[1-9]\\d*(\\.\\d*)?))?)(?=[)\\s])",
       "name": "constant.other.duration.orfeo"
     },
     "datum-quoted": {
-      "match": "(?<=^|\\(|\\s|\\^)\"[^\"]*\"(?=\\.|\\)|\\s)",
+      "match": "(?<=^|[(\\s^])\"[^\"]*\"(?=[)\\s.])",
       "name": "string.quoted.double.datum.orfeo"
     },
     "datum-unquoted": {
-      "match": "(?<=^|\\(|\\s|\\^)(\\.*[_a-zA-Z0-9/\\[\\]♮♭♯-]+)+(?=\\.|\\)|\\s)",
+      "match": "(?<=^|[(\\s^])[.\\w/\\[\\]♮♭♯-]*[\\w/\\[\\]♮♭♯-](?=[)\\s.])",
       "name": "string.unquoted.datum.orfeo"
     },
     "rhythm-flags": {
-      "match": "(?<=^|\\(|\\s)\\^+(?=\\(|\"[^\"]*\"|(\\.*[_a-zA-Z0-9/\\[\\]♮♭♯-]+)+)",
+      "match": "(?<=^|[(\\s])\\^+(?=\\(|\"[^\"]*\"|[.\\w/\\[\\]♮♭♯-]*[\\w/\\[\\]♮♭♯-])",
       "name": "keyword.other.rhythm.flags.orfeo"
     },
     "rhythm-dots": {
-      "match": "(?<=\\)|\"|[_a-zA-Z0-9/\\[\\]♮♭♯-])\\.+(?=\\)|\\s)",
+      "match": "(?<=[)\"\\w/\\[\\]♮♭♯-])\\.+(?=[)\\s])",
       "name": "keyword.other.rhythm.dots.orfeo"
     }
   }
