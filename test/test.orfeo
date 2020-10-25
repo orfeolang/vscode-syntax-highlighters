@@ -208,6 +208,8 @@ _datum_DATUM_/[A♮]/[B♭]/[C♯]/.-0.9
 "   "
 "_datum_DATUM_/[A♮]/[B♭]/[C♯]/.-0.9"
 
+" ( ) := :4 :4/4 datum ^a b. "
+
 #_Rhythm_Flags_and_Rhyhtm_Dots_should_pass
 
 ^^^(
